@@ -14,7 +14,7 @@ def form_word(word: str) -> str:
 
 
 def hey_brether(words: List[str]) -> str:
-    return '\n'.join([form_word(w) for w in words])
+    return '\n\n'.join([form_word(w) for w in words])
 
 
 if __name__ == "__main__":
