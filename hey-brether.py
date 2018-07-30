@@ -3,6 +3,7 @@
 import sys
 from typing import List
 
+
 def form_letter(letter: str) -> tuple:
     parts = [f':z_{letter}_{i}:' for i in range(4)]
     return ''.join(parts[:2]), ''.join(parts[2:])
