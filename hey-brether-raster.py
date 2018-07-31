@@ -6,7 +6,7 @@ from sys import argv
 
 from vendor.blockwise_view import blockwise_view
 
-tinierFont = ImageFont.truetype('fonts/tinier/tinier.ttf', 4)
+tinierFont = ImageFont.truetype('fonts/tinier/Tinier.ttf', 4)
 tinyFont = ImageFont.truetype('fonts/tiny/tiny.ttf', 6)
 tiny2xFont = ImageFont.truetype('fonts/tiny/tiny.ttf', 6 * 2)
 tiny3xFont = ImageFont.truetype('fonts/tiny/tiny.ttf', 6 * 3)
