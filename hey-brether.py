@@ -74,7 +74,7 @@ def encode_block_block_el(block: List[List[int]]) -> str:
     block = np.array(block).flatten()
     binary = int('0b' + ''.join([('0' if pixel == 255 else '1') for pixel in block]), 2)
     hex_map = {
-        0b0000: 0x2800,
+        0b0000: 0x2003,
         0b0001: 0x2597,
         0b0010: 0x2596,
         0b0011: 0x2584,
@@ -152,12 +152,16 @@ def encoded_to_emoji(encoded: List[List[str]]) -> str:
 
 class HeyBrether(object):
     def blocks(self, *items):
-        im = render_text(list(items), 28 * 2, 100)
+        im = render_text(list(items), 34*2, 100)
+        print('```')
         print(stringify_encoded_array(encode_pixels_block_el(im)))
+        print('```')
 
     def braile(self, *items):
-        im = render_text(list(items), 28, 100)
+        im = render_text(list(items), 30*2, 100)
+        print('```')
         print(stringify_encoded_array(encode_pixels_braile(im)))
+        print('```')
 
     def emoji(self, *items):
         im = render_text(list(items), 14 * 2, 100)
