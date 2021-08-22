@@ -163,6 +163,14 @@ class HeyBrether(object):
         print(stringify_encoded_array(encode_pixels_braile(im)))
         print('```')
 
+    def img(self, path: str):
+        im = Image.open(path)
+        im = im.convert('RGB')
+        im = im.convert('1')
+        print('```')
+        print(stringify_encoded_array(encode_pixels_braile(im)))
+        print('```')
+
     def emoji(self, *items):
         im = render_text(list(items), 14 * 2, 100)
         print(encoded_to_emoji(encode_pixels_emoji(im)))
